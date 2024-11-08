@@ -195,7 +195,7 @@ override_dh_installinit:
 	dh_installinit -R --name ssh
 
 override_dh_installsystemd:
-	dh_installsystemd -popenssh-server ssh.service
+	dh_installsystemd -popenssh-server --no-enable ssh.service
 	dh_installsystemd -popenssh-server --no-enable ssh.socket
 	dh_installsystemd -popenssh-server --no-start rescue-ssh.target
 
